@@ -26,23 +26,6 @@ class QuizList extends Component {
 
      componentDidMount() {
         this.props.fetchQuizes()
-        // try {
-        //     const response = await Axios.get('quizes.json')
-        //     const quizes = []
-        //
-        //     Object.keys(response.data).forEach((key, index) => {
-        //         quizes.push({
-        //             id: key,
-        //             name: `Тест №${index + 1}`
-        //         })
-        //     })
-        //
-        //     this.setState({
-        //         quizes, loading: false
-        //     })
-        // } catch (e) {
-        //     console.log(e)
-        // }
     }
 
     render() {
@@ -66,7 +49,7 @@ class QuizList extends Component {
 
 function mapStateToProps(state) {
     return {
-        quizes:state.quiz.quizes,
+        quizes: state.quiz.quizes,
         loading: state.quiz.loading
     }
 }
